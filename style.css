@@ -47,10 +47,16 @@ html {
     text-align: center;
     transition: 0.3s;
     opacity: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#msg::-webkit-scrollbar {
+    display: none;
 }
 
 #msgbox {
-    position: absolute;
+    position: relative;
     background-color: black;
     border-radius: 90px;
     top: 50%;
@@ -92,7 +98,7 @@ html {
     width: 1px;
     height: 1px;
     background: transparent;
-    animation: animStar 40s linear infinite;
+    animation: animStar 43s linear infinite;
 }
 
 #stars2 {
@@ -102,6 +108,26 @@ html {
     width: 1px;
     height: 1px;
     background: transparent;
+    animation: animStar 43s linear infinite;
+}
+
+#stars3 {
+    content: " ";
+    position: relative;
+    top: 0%;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    animation: animStar 40s linear infinite;
+}
+
+#stars4 {
+    content: " ";
+    position: relative;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
     animation: animStar 40s linear infinite;
 }
 
@@ -110,10 +136,23 @@ html {
     animation: spacecore 6s linear 1;
 }
 
+#wheatley {
+    position: absolute;
+    animation: wheatley 24s linear 1;
+}
+
 .spacecore {
     position: absolute;
     top: -10%;
     left: -10%;
+}
+
+.wheatley {
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 4%;
+    height: auto;
 }
 
 @keyframes animStar {
@@ -133,5 +172,18 @@ html {
     to {
         top: 110%;
         left: 80%;
+    }
+}
+
+@keyframes wheatley {
+    from {
+        top: 20%;
+        right: -10%;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 70%;
+        right: 110%;
+        transform: rotate(360deg);
     }
 }
