@@ -49,6 +49,6 @@ async function Begin() {
     от коллег, и энергично провести этот день. Также хочется пожелать чтобы сегодняшний день был для тебя самым счастливым в этом году и чтобы, если чудо существует, оно сегодня с тобой случилось!`;
     await sleep(10000);
     document.getElementsByClassName("spacecore")[0].id = "spacecore";
-    await sleep(6000);
+    await sleep(10000);
     document.getElementsByClassName("wheatley")[0].id = "wheatley";
 }
